@@ -1,0 +1,50 @@
+<section id="realisations" ng-controller="RealisationsController">
+	<h2>Réalisations</h2>
+
+	<ul class="row">
+		<li class="col-md-4" ng-repeat="(key, item) in items">
+			<a href="#{{key}}" ng-click="focusItem">
+				<figure>
+					<img src="./img/Realisation-{{item.image}}" alt="" />
+					<figcaption>
+						<h2>{{item.title}}</h2>
+					</figcaption>
+				</figure>
+			</a>
+			<p>{{item.shortDesc}}</p>
+		</li>
+	</ul>
+	
+	<article ng-repeat="(key, item) in items" id="{{key}}" class="toreveal">
+		<a href="#realisations" ng-click="unfocusItem">
+			<img class="pull-right" src="./img/Realisation-{{item.image}}" alt="" />
+			<h2>{{item.title}}</h2>
+		</a>
+		<p><b>{{item.shortDesc}}</b></p>
+		<p>{{item.longDesc}}</p>
+		<p><a href="#realisations"><em>Revenir aux autres réalisations</em></a></p>
+	</article>
+	
+</section>
+
+<section id="conferences" ng-controller="ConferencesController">
+	<h2>Conférences</h2>
+	<ul class="row">
+		<li class="col-md-4" ng-repeat="item in items">
+			<a href="{{item.url}}">
+				<figure>
+					<img src="./img/Conf-{{item.image}}" alt="" />
+					<figcaption>
+						<h2>{{item.title}}</h2>
+						<p class="onhover">{{item.shortDesc}}</p>
+					</figcaption>
+				</figure>
+			</a>
+			
+		</li>
+	</ul>
+	<p>
+		Outre <a href="http://dascritch.net/tag/talk">ces conférences</a> qui ont lieues aléatoirement, je peux aussi vous proposer de <a href="http://dascritch.net/post/2014/05/07/Je-suis-un-Bagger">faire un brown bag avec votre équipe</a>.
+	</p>
+</section>
+
