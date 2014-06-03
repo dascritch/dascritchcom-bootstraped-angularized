@@ -29,6 +29,14 @@
     -webkit-transition-duration: 0.5s;
 }
 
+section {
+    margin-bottom : 200px;
+}
+
+article {
+    padding-top : 100px;
+}
+
 section ul {
     list-style: none;
     margin: 0;
@@ -64,5 +72,5 @@ a:hover .onhover , a:focus .onhover {
 }
 
 .toreveal:target {
-    max-height : 400px;
+    max-height : 1000px;
 }

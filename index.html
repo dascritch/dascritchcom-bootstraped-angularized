@@ -27,20 +27,31 @@
 <body ng-app="resumeeApp">
 		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 			<div class="container">
+				<ul class="nav navbar-nav navbar-right">
+		            <li id="fat-menu" class="dropdown">
+						<a href="#" id="drop" role="button" class="dropdown-toggle" data-toggle="dropdown">Menu<b class="caret"></b></a>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="drop">
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#presentation">Présentation</a></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#realisations">Réalisations</a>
+								<ul ng-controller="RealisationsController">
+									<li role="presentation" ng-repeat="(key, item) in items"><a role="menuitem" tabindex="-1" href="#{{key}}">{{item.title}}</a></li>
+								</ul>
+							</li>
+							<li role="presentation" class="divider"></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="#conferences">Conférences</a></li>
+							<li role="presentation" class="divider"></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.linkedin.com/in/dascritch">LinkedIn</a></li>
+							<li role="presentation"><a role="menuitem" tabindex="-1" href="http://dascritch.net">Blog</a></li>
+						</ul>
+		            </li>
+	          	</ul>
 				<div class="navbar-header">
-					<!-- 
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-						<span class="sr-only"></span>
-						<span class="icon-bar">Présentation</span>
-						<span class="icon-bar">Réalisations</span>
-						<span class="icon-bar">Conférences</span>
-						<span class="icon-bar">Blog technique</span>
-					</button>
-					-->
 					<a class="navbar-brand" href="#">Xavier Mouton-Dubosc, lead web developer</a>
 				</div>
 				<div class="navbar-collapse collapse">
 				</div>
+
+			
 			</div>
 		</div>
 
@@ -51,7 +62,7 @@
 				<h1 class="fn">Je suis <strong><span class="given-name">Xavier</span> <span class="family-name">Mouton-Dubosc</span></strong></h1>
 				<h2>je suis <strong class="role">lead web developer</strong></h2>
 				<p>
-					J'aime défricher les prochaines normes comme le HTML5, Javascript ECMA6, DOM3, les microformats et le Single Page Application. Je suis sensibilisé aux problèmes de sécurité et de vie privée et je partage mes connaissances lors de conférences.
+					J'aime défricher les prochaines normes comme le <a href="http://dascritch.net/tag/html">HTML5</a>, <a href="http://dascritch.net/tag/javascript">Javascript ECMA6</a>, <a href="http://dascritch.net/tag/dom">DOM3</a>, les microformats et le Single Page Application. Je suis sensibilisé aux problèmes de <a href="http://dascritch.net/tag/s%C3%A9curit%C3%A9">sécurité</a> et de <a href="http://dascritch.net/tag/privacy">vie privée</a> et je partage mes connaissances lors de <a href="http://dascritch.net/tag/talks">conférences</a>.
 				</p>
 				<p>
 					Mes compétences font la part belle à la modernité, la solidité, l'accessibilité et surtout à l'expérience.
@@ -63,7 +74,6 @@
 		<main class="container">
 
 			<section id="realisations" ng-controller="RealisationsController">
-				<!-- La partie expérience fait appel à un premier service REST -->
 				<h2>Réalisations</h2>
 
 				<ul class="row">
@@ -87,12 +97,12 @@
 					</a>
 					<p><b>{{item.shortDesc}}</b></p>
 					<p>{{item.longDesc}}</p>
+					<p><a href="#realisations"><em>Revenir aux autres réalisations</em></a></p>
 				</article>
 				
 			</section>
 
 			<section id="conferences" ng-controller="ConferencesController">
-				<!-- La partie expérience fait appel à un premier service REST -->
 				<h2>Conférences</h2>
 				<ul class="row">
 					<li class="col-md-4" ng-repeat="item in items">
