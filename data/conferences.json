@@ -1,0 +1,26 @@
+[{ 
+    "title" : "Pourquoi la Cryptoparty" ,
+    "url" : "http://dascritch.net/post/2014/04/22/Pourquoi-la-Cryptoparty",
+    "shortDesc":"Recouper, partager, apprendre, faire progresser. Petit guide historique de la protestation technologique à la surveillance de masse.",
+    "image" : "PourquoiCryptoparty.jpg"
+},{ 
+    "title" : "JSON ou l'histoire d'une licence presque libre" ,
+    "url" : "http://dascritch.net/post/2014/01/07/Json-ou-l-histoire-d-une-licence-presque-libre",
+    "shortDesc":"Une conférence en vidéo où en 20 minutes, je vais vous parler du JSON, de sa licence, de politique étrangère, d'activisme, 'humour, du Bien et du Mal. Et pourquoi un logiciel libre peut vous fliquer.",
+    "image" : "LicenceJson.jpg"
+},{
+    "title" : "Vers une nouvelle éthique" ,
+    "url" : "http://dascritch.net/post/2013/12/19/Vers-l-engagement-politique-%C3%A0-Paris-Web",
+    "shortDesc":"Il est temps d'aller au-delà de notre métier, de notre rôle de conseil, de s'imposer pour que les lois ne s'écrivent plus contre nous. Expliquer la neutralité des réseaux, et en quoi la protection de notre vie privée et de notre présomption d'innocence n'est pas négociable.",
+    "image" : "NouvelleEthique.jpg"
+},{
+    "title" : "Testez vos recruteurs" ,
+    "url" : "http://dascritch.net/post/2012/11/06/Live-at-Sud-Web-%3A-Testez-vos-recruteurs",
+    "shortDesc":"J'ai mis mon plus beau costard à Sud Web pour en tailler un beau.",
+    "image" : "Recruteurs.png"
+},{
+    "title" : "Des emoji dans l'Unicode" ,
+    "url" : "http://dascritch.net/post/2012/09/25/Des-emoji-dans-l-Unicode-%E2%96%B6-Pr%C3%A9sentation-en-live",
+    "shortDesc" :"En Mars 2009, une drôle de proposition a été faite au Consortium Unicode par Apple et Google. D'une manière étonnante, les deux frères ennemis du smartphone s'étaient unis dans une cause commune pour ajouter des entrées au lexique des caractères universels.",
+    "image" : "Emoji.png"
+}]

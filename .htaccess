@@ -1,0 +1,9 @@
+Options -Indexes -Multiviews
+AddDefaultCharset UTF-8
+
+<FilesMatch "\.html$">
+	<ifModule mod_headers.c>
+		Header set "Access-Control-Allow-Origin" "self"
+		Header set "Access-Control-Allow-Headers" "Content-Type"
+	</ifModule>
+</FilesMatch>

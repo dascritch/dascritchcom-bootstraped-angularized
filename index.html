@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Xavier Mouton-Dubosc, lead web developer</title>
+	<!-- sources styles , à minimifier -->
+	<link rel="stylesheet" href="/sources/bootstrap-3.1.1-dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="/sources/bootstrap-3.1.1-dist/css/bootstrap-theme.min.css" />
+	<link rel="stylesheet" href="/sources/dsn/style.css" />
+	<!-- sources scripts , à strict, minimifier et async -->
+	<script src="/sources/jquery/jquery-1.11.1.min.js"></script>
+	<script src="/sources/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+	<!-- remonter ici les appels improprements mis en fin de body -->
+	<!-- notices -->
+    <link rel="profile" href="http://microformats.org/profile/hcard" />
+	<meta name="description" content="Présentation du cv de Xavier Mouton-Dubosc en tant que lead web developer">
+	<meta name="author" content="Xavier Mouton-Dubosc">
+	<link rel="shortcut icon" href="/favicon.ico">
+	<!-- indications pour aspects -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, target-densityDpi=medium-dpi, initial-scale=0.8" />
+    <link rel="icon" type="image/png" href="/sources/favicon/favicon16.png" />
+    <link rel="icon" type="image/png" sizes="128x128" href="/sources/favicon/favicon128.png" />
+    <link rel="search" type="application/opensearchdescription+xml" title="Da Scritch blog" href="http://dascritch.net/blogfind.xml" />
+
+</head>
+<body ng-app="resumeeApp">
+		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<!-- 
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only"></span>
+						<span class="icon-bar">Présentation</span>
+						<span class="icon-bar">Réalisations</span>
+						<span class="icon-bar">Conférences</span>
+						<span class="icon-bar">Blog technique</span>
+					</button>
+					-->
+					<a class="navbar-brand" href="#">Xavier Mouton-Dubosc, lead web developer</a>
+				</div>
+				<div class="navbar-collapse collapse">
+				</div>
+			</div>
+		</div>
+
+		<header id="presentation" class="jumbotron">
+			<!-- L'introduction est remontée dans un Jumbotron -->
+			<div class="container">
+				<img class="pull-right" src="/sources/favicon/favicon128.png" alt="photo" />
+				<h1 class="fn">Je suis <strong><span class="given-name">Xavier</span> <span class="family-name">Mouton-Dubosc</span></strong></h1>
+				<h2>je suis <strong class="role">lead web developer</strong></h2>
+				<p>
+					J'aime défricher les prochaines normes comme le HTML5, Javascript ECMA6, DOM3, les microformats et le Single Page Application. Je suis sensibilisé aux problèmes de sécurité et de vie privée et je partage mes connaissances lors de conférences.
+				</p>
+				<p>
+					Mes compétences font la part belle à la modernité, la solidité, l'accessibilité et surtout à l'expérience.
+					Un projet&nbsp;? Un besoin&nbsp;? Un problème&nbsp;? Je peux vous conseiller, et vous aider à faire le meilleur choix possible pour le futur de votre activité.
+				</p>
+			</div>
+		</header>
+
+		<main class="container">
+
+			<section id="realisations" ng-controller="RealisationsController">
+				<!-- La partie expérience fait appel à un premier service REST -->
+				<h2>Réalisations</h2>
+
+				<ul class="row">
+					<li class="col-md-4" ng-repeat="(key, item) in items">
+						<a href="#{{key}}" ng-click="focusItem">
+							<figure>
+								<img src="/img/Realisation-{{item.image}}" alt="" />
+								<figcaption>
+									<h2>{{item.title}}</h2>
+								</figcaption>
+							</figure>
+						</a>
+						<p>{{item.shortDesc}}</p>
+					</li>
+				</ul>
+				
+				<article ng-repeat="(key, item) in items" id="{{key}}" class="toreveal">
+					<a href="#realisations" ng-click="unfocusItem">
+						<img class="pull-right" src="/img/Realisation-{{item.image}}" alt="" />
+						<h2>{{item.title}}</h2>
+					</a>
+					<p><b>{{item.shortDesc}}</b></p>
+					<p>{{item.longDesc}}</p>
+				</article>
+				
+			</section>
+
+			<section id="conferences" ng-controller="ConferencesController">
+				<!-- La partie expérience fait appel à un premier service REST -->
+				<h2>Conférences</h2>
+				<ul class="row">
+					<li class="col-md-4" ng-repeat="item in items">
+						<a href="{{item.url}}">
+							<figure>
+								<img src="/img/Conf-{{item.image}}" alt="" />
+								<figcaption>
+									<h2>{{item.title}}</h2>
+									<p class="onhover">{{item.shortDesc}}</p>
+								</figcaption>
+							</figure>
+						</a>
+						
+					</li>
+				</ul>
+				<p>
+					Outre <a href="/tag/talk">ces conférences</a> qui ont lieues aléatoirement, je peux aussi vous proposer de <a href="http://dascritch.net/post/2014/05/07/Je-suis-un-Bagger">faire un brown bag avec votre équipe</a>.
+				</p>
+			</section>
+
+			<footer>
+				<p>handcrafted in 2014</p>
+			</footer>
+
+		</main>
+
+	<!-- Cette erreur stupide chez Google de mettre les assets js en fin de body au lieu d'utiliser async… -->
+	<script src="/sources/angularjs/angular.min.js"></script>
+	<script src="/sources/angularjs/angular-route.min.js"></script>
+	<script src="/js/app.js"></script>
+	<script src="/js/services.js"></script>
+	<script src="/js/controllers.js"></script>
+	<script src="/js/filters.js"></script>
+	<script src="/js/directives.js"></script>
+
+</body>
+</html>

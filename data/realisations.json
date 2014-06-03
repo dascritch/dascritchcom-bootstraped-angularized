@@ -1,0 +1,16 @@
+{"Simtie":{ 
+    "title" : "Simtie" ,
+    "shortDesc":"Simtie est un service de gestion documentaire destiné aux TPE/PME. Il est conçu dans les principes flexibles utilisés pour dAgence.",
+    "image" : "simtie.png",
+    "longDesc":"Projet commandé construit avec deux co-développeurs, le responsable IT et le Product Owner. Planification agile Scrum, développement en TDD et usage de Git. \n Développé sur un code PHP, framework CakePHP et une base PostGreSQL, avec des webservices backend d'indexation/OCR sous Windows écrits en C# asservissant Atalasoft Imaging. Interface en balisage HTML5 dans une optique d'application responsive web-design en Single Page Application. Javascript front-end sur des bases jQuery et PDF.js.\n Autres technologies employées : Vim, Kdevelop, SublimeText, Bash, XML, CSS, ASPX, Linux"
+},"Touchalize":{ 
+    "title" : "Back-office Touchalize" ,
+    "shortDesc":"Touchalize est une app de personnalisation de vidéos publicitaires virales. Le back-office permet aux annonceurs de consultater de statistiques de vues.",
+    "image" : "Touchalize.jpg",
+    "longDesc":"Projet commandé. Construction d'un mock-up fonctionnel d'une interface de consultation de statistiques, en vue des salons LeWeb 12 et Mobile World Congress 2013 et d'un player vidéo HTML5 avec fallback vers l'application mobile. Utilisation de Git.\nDéveloppeur principal du back-office sur une base NodeJS (Javascript backend) et des bases NoSQL CouchDB/MongoDB, hébergé sur AWS (EC2 et S3).\nInterface en balisage HTML5 pensée pour des démonstrations fluides sur surfaces tactiles, avec graphiques animés en SVG (bibliothèques Ext.js et Sencha graphs).\nAutres technologies : Vim, SublimeText, WebStorm, Bash, XML, CSS, Javascript, Mac, Linux, Android, iOS"
+},"Dagence":{ 
+    "title" : "Dagence" ,
+    "shortDesc" :"dAgence est une solution d'hébergement/cocooning pour les agences web. Elles peuvent ainsi proposer des services d'e-commerce sans le tracas de la maintenance.",
+    "image" : "dAgencePro.png",
+    "longDesc":"Projet commandé construit avec deux co-développeurs, le responsable IT et le Product Owner. Planification agile Scrum, développement en TDD et usage de Git. \n Développé sur un code PHP, framework CakePHP et une base PostGreSQL, avec des webservices backend d'indexation/OCR sous Windows écrits en C# asservissant Atalasoft Imaging. Interface en balisage HTML5 dans une optique d'application responsive web-design en Single Page Application. Javascript front-end sur des bases jQuery et PDF.js.\nAutres technologies employées : Vim, Kdevelop, SublimeText, Bash, XML, CSS, ASPX, Linux"
+}}

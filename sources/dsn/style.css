@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 400;
+    src: local("Titillium"),
+    local("Titillium Web"),
+    local("TitilliumWeb-Regular"),
+    url(http://dascritch.net/themes/DSN13/fonts/TitilliumWeb-Regular.woff?__origin=FromAngularCV) format("woff");
+}
+
+@font-face {
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 700;
+    src: local("Titillium Bold"),
+    local("Titillium WebBold"),
+    local("TitilliumWeb-Bold"),
+    url(http://dascritch.net/themes/DSN13/fonts/TitilliumWeb-Bold.woff?__origin=FromAngularCV) format("woff");
+}
+
+
+* {
+	font-family: 'Titillium Web';
+    transition-property: max-height ; 
+    -moz-transition-property: max-height ; 
+    -webkit-transition-property: max-height ; 
+    transition-duration: 0.5s;  
+    -moz-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+}
+
+section ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+section figure {
+    position : relative;
+}
+
+section figcaption {
+    position : absolute;
+    bottom : 5px;
+    padding : 0 5px;
+    margin : 5px;
+    text-align: center;
+    background : white;
+    background : rgba(255,255,255,0.7);
+}
+
+section figure img {
+    width : 100%;
+}
+
+.onhover , .toreveal{
+    color : black;
+    max-height : 0;
+    overflow : hidden;
+}
+
+a:hover .onhover , a:focus .onhover {
+    max-height : 400px;
+}
+
+.toreveal:target {
+    max-height : 400px;
+}
