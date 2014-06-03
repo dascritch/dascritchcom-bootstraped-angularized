@@ -26,31 +26,27 @@
 </head>
 <body ng-app="resumeeApp">
 		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-			<div class="container">
-				<ul class="nav navbar-nav navbar-right">
-		            <li id="fat-menu" class="dropdown">
-						<a href="#" id="drop" role="button" class="dropdown-toggle" data-toggle="dropdown">Menu<b class="caret"></b></a>
-						<ul class="dropdown-menu" role="menu" aria-labelledby="drop">
-							<li role="presentation"><a role="menuitem" tabindex="-1" href="#presentation">Présentation</a></li>
-							<li role="presentation"><a role="menuitem" tabindex="-1" href="#realisations">Réalisations</a>
-								<ul ng-controller="RealisationsController">
-									<li role="presentation" ng-repeat="(key, item) in items"><a role="menuitem" tabindex="-1" href="#{{key}}">{{item.title}}</a></li>
-								</ul>
-							</li>
-							<li role="presentation" class="divider"></li>
-							<li role="presentation"><a role="menuitem" tabindex="-1" href="#conferences">Conférences</a></li>
-							<li role="presentation" class="divider"></li>
-							<li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.linkedin.com/in/dascritch">LinkedIn</a></li>
-							<li role="presentation"><a role="menuitem" tabindex="-1" href="http://dascritch.net">Blog</a></li>
-						</ul>
-		            </li>
-	          	</ul>
-				<div class="navbar-header">
-					<a class="navbar-brand" href="#">Xavier Mouton-Dubosc, lead web developer</a>
+			<div>
+			<div class="nav navbar-nav">
+				<div class="navbar-header" id="fat-menu" class="dropdown">
+					<a href="#" id="drop" role="button" class="dropdown-toggle navbar-brand" data-toggle="dropdown">Xavier Mouton-Dubosc<b class="caret"></b></a>
+					<ul class="dropdown-menu" role="menu" aria-labelledby="drop">
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="#presentation">Présentation</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="#realisations">Réalisations</a>
+							<ul ng-controller="RealisationsController">
+								<li role="presentation" ng-repeat="(key, item) in items"><a role="menuitem" tabindex="-1" href="#{{key}}">{{item.title}}</a></li>
+							</ul>
+						</li>
+						<li role="presentation" class="divider"></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="#conferences">Conférences</a></li>
+						<li role="presentation" class="divider"></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.linkedin.com/in/dascritch">LinkedIn</a></li>
+						<li role="presentation"><a role="menuitem" tabindex="-1" href="http://dascritch.net">Blog</a></li>
+					</ul>
 				</div>
 				<div class="navbar-collapse collapse">
 				</div>
-
+				</div>
 			
 			</div>
 		</div>
