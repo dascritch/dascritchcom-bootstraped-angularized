@@ -3,7 +3,7 @@
 
 	<ul class="row">
 		<li class="col-md-6" ng-repeat="(key, item) in items">
-			<a href="#{{key}}" ng-click="focusItem">
+			<a href="#Realisation/{{key}}" ng-click="focusItem()">
 				<figure>
 					<img src="./img/Realisation-{{item.image}}" alt="" />
 					<figcaption>
@@ -15,16 +15,7 @@
 		</li>
 	</ul>
 	
-	<article ng-repeat="(key, item) in items" id="{{key}}" class="toreveal">
-		<a href="#realisations" ng-click="unfocusItem">
-			<img class="pull-right" src="./img/Realisation-{{item.image}}" alt="" />
-			<h2>{{item.title}}</h2>
-		</a>
-		<p><b>{{item.shortDesc}}</b></p>
-		<p>{{item.longDesc}}</p>
-		<p><a href="#realisations"><em>Revenir aux autres réalisations</em></a></p>
-	</article>
-	
+	<article ng-view></article>	
 </section>
 
 <section id="conferences" ng-controller="ConferencesController">

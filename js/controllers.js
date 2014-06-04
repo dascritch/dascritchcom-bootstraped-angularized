@@ -1,16 +1,18 @@
 'use strict';
 
 angular.module('resumeeApp.controllers', []).
-	controller('RealisationsController', ['$scope','RealisationsService', function($scope,RealisationsService) {
+	controller('RealisationsController', ['$scope','$routeParams','RealisationsService', function($scope,$routeParams,RealisationsService) {
         $scope.items = [];
+        $scope.params = $routeParams;
         
-        RealisationsService.getReal().success(function (response) {
+        RealisationsService.getReal($scope.params.realId).success(function (response) {
             $scope.items = response;
+
+            if ($scope.params.realId !== undefined) {
+                $scope.item = $scope.items[$scope.params.realId];
+            }
         });
 
-        $scope.focusItem = function() {
-            console.log("jjjj");
-        }
 	}]).
     controller('ConferencesController', ['$scope','ConferencesService', function($scope,ConferencesService) {
         $scope.items = [];

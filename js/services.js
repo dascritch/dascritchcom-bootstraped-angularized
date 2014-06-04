@@ -4,10 +4,15 @@ angular.module('resumeeApp.services', []).
 	factory('RealisationsService', function($http) {
 		var RealisationsService = {};
 		
-		RealisationsService.getReal = function() {
+		RealisationsService.getReal = function(id) {
+
+			// NOTE : j'aurais aimé faire autrement, mais htaccess n'est pas forcément autorisé partout, et mes manips nécessaires encore moins sur github gh-pages...
+
+			var key = ( id === undefined ? 'index' : id ) +'.json';
+
 			return $http({
 		        method: 'GET', 
-		        url: './data/realisations'
+		        url: './data/realisations/index.json'
 			});
 		}
 
@@ -20,7 +25,7 @@ angular.module('resumeeApp.services', []).
 		ConferencesService.getReal = function() {
 			return $http({
 		        method: 'GET', 
-		        url: './data/conferences'
+		        url: './data/conferences/index.json'
 			});
 		}
 

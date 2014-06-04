@@ -18,7 +18,6 @@
     url(http://dascritch.net/themes/DSN13/fonts/TitilliumWeb-Bold.woff?__origin=FromAngularCV) format("woff");
 }
 
-
 * {
 	font-family: 'Titillium Web';
     transition-property: max-height ; 
@@ -30,7 +29,7 @@
 }
 
 section {
-    margin-bottom : 200px;
+    margin-bottom : 100px;
 }
 
 article {
@@ -49,9 +48,9 @@ section figure {
 
 section figcaption {
     position : absolute;
-    bottom : 5px;
-    padding : 0 5px;
-    margin : 5px;
+    bottom : 0px;
+    padding : 0 10px;
+    width : 100%;
     text-align: center;
     background : white;
     background : rgba(255,255,255,0.7);
@@ -84,6 +83,7 @@ section h2 {
 }
 
 @media (max-width: 767px) {
+    /* éviter que le haut de la présentation soit caché par le menu qui apparait en mode mobile  */
 
     #presentation {
         padding-top : 80px;
@@ -92,5 +92,6 @@ section h2 {
 }
 
 #realisations li {
+    /* hotfix concernant un problème de saut de gouttière */
     min-height : 230px;
 }

@@ -1,3 +1,6 @@
+# NOTE : j'aurais aimé faire autrement, mais .htaccess n'est pas forcément autorisé partout, et mes manips nécessaires encore moins sur github gh-pages...
+# Donc je fais comme si on ne l'avait pas
+
 Options -Indexes +Multiviews
 AddDefaultCharset UTF-8
 
@@ -9,3 +12,9 @@ AddHandler application/json .json
 		Header set "Access-Control-Allow-Headers" "Content-Type"
 	</ifModule>
 </FilesMatch>
+
+<Directory data>
+	ForceType application/json
+	AddDefaultCharset UTF-8
+	DirectoryIndex index.json
+</Directory>
