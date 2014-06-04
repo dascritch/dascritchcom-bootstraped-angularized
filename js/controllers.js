@@ -13,6 +13,11 @@ angular.module('resumeeApp.controllers', []).
             }
         });
 
+        $scope.backFromItem = function(){
+            $('#realisations ul').slideDown();
+            
+        }
+
 	}]).
     controller('ConferencesController', ['$scope','ConferencesService', function($scope,ConferencesService) {
         $scope.items = [];
