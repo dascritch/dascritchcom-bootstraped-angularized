@@ -1,10 +1,9 @@
 	
 <article>
-	<a href="../Realisations">
 		<img class="pull-right" src="./img/Realisation-{{item.image}}" alt="" />
 		<h2>{{item.title}}</h2>
-	</a>
+
 	<p><b>{{item.shortDesc}}</b></p>
-	<p>{{item.longDesc}}</p>
+	<p ng-bind-html="item.longDesc">{   { item.longDesc}   }</p>
 	<p><a href="#realisations" ng-click="backFromItem()"><em>Revenir aux autres réalisations</em></a></p>
 </article>

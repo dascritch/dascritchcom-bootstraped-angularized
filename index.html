@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="./sources/dsn/spinner.css" />
 	<!-- sources scripts , à strict, minimifier et async -->
 	<script src="./sources/jquery/jquery-1.11.1.min.js"></script>
+	<script src="./sources/jquery-scrollto/jquery.scrollTo.min.js "></script>
 	<script src="./sources/bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
 	<!-- remonter ici les appels improprements mis en fin de body -->
 	<!-- notices -->
@@ -35,7 +36,7 @@
 					<li role="presentation"><a role="menuitem" tabindex="-1" href="#presentation">Présentation</a></li>
 					<li role="presentation"><a role="menuitem" tabindex="-1" href="#realisations">Réalisations</a>
 						<ul ng-controller="RealisationsController">
-							<li role="presentation" ng-repeat="(key, item) in items"><a role="menuitem" tabindex="-1" href="#/Realisation/{key}}">{{item.title}}</a></li>
+							<li role="presentation" ng-repeat="(key, item) in items"><a role="menuitem" tabindex="-1" href="#/Realisation/{{key}}">{{item.title}}</a></li>
 						</ul>
 					</li>
 					<li role="presentation" class="divider"></li>
