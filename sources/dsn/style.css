@@ -82,6 +82,12 @@ section h2 {
     font-weight: bold;
 }
 
+
+#realisations li {
+    /* hotfix concernant un problème de saut de gouttière */
+    min-height : 230px;
+}
+
 @media (max-width: 767px) {
     /* éviter que le haut de la présentation soit caché par le menu qui apparait en mode mobile  */
 
@@ -91,7 +97,9 @@ section h2 {
 
 }
 
-#realisations li {
-    /* hotfix concernant un problème de saut de gouttière */
-    min-height : 230px;
+@media (min-width: 768px) {
+    article img {
+        max-width : 75%;
+    }
 }
+
