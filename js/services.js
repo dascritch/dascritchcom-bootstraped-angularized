@@ -42,10 +42,11 @@ angular.module('resumeeApp.services', []).
 		}
 
 		AspectService.backFromItem = function(id) {
-			$('section').slideDown();
+			var delaySliding = 100;
+			$('section').slideDown(delaySliding);
             // on est d'accord ? c'est über crade. Sauf que les hauteurs changeants de concert, impossible de calculer d'entrée le bon offset
             // et impossible de chainer jquery.delay()
-            setTimeout(function(){$.scrollTo('#'+id, 800)},100);
+            setTimeout(function(){$.scrollTo('#'+id, 800)},delaySliding);
 		}
 
 		return AspectService;

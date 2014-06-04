@@ -96,12 +96,24 @@ section h2 {
         max-height : 300px;
         overflow : hidden;
     }
+    article img {
+        display : block;
+        margin : 8px auto;
+        max-width : 50%;
+    }
 
 }
 
 @media (min-width: 768px) {
     article img {
-        max-width : 75%;
+        max-width : 50%;
+        float : right;
     }
 }
 
+@media (min-width: 1002px) {
+    article img {
+        max-width : 75%;
+        float : right;
+    }
+}
