@@ -21,10 +21,11 @@ angular.module('resumeeApp.controllers', []).
         }
 
 	}]).
-    controller('ConferencesController', ['$scope','$sce','ConferencesService', function($scope,$sce,ConferencesService) {
+    controller('ConferencesController', ['$scope','$routeParams','$sce','ConferencesService', function($scope,$routeParams,$sce,ConferencesService) {
         $scope.items = [];
+        $scope.params = $routeParams;
         
-        ConferencesService.getConf().success(function (response) {
+        ConferencesService.getConf($scope.params.realId).success(function (response) {
             // je déteste cette notation, mais faut penser à ce pauvre Safari aussi
             for( var i in response) { 
                 if (response.hasOwnProperty(i)) {
@@ -33,4 +34,11 @@ angular.module('resumeeApp.controllers', []).
             }
             $scope.items = response;
         });
+
+        // ça mériterait une sérieuse refacto, mais y'a un bug que je ne m'explique pas
+
+        $scope.backFromItem = function(){
+            $('#conferences ul').slideDown();
+            $.scrollTo('#conferences', 800);
+        }
     }]);
