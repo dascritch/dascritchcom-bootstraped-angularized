@@ -1,8 +1,8 @@
-{
+{"1":{ 
     "id" : 1,
     "title" : "Des emoji dans l'Unicode" ,
     "url" : "http://dascritch.net/post/2012/09/25/Des-emoji-dans-l-Unicode-%E2%96%B6-Pr%C3%A9sentation-en-live",
     "shortDesc" :"En Mars 2009, une drôle de proposition a été faite au Consortium Unicode par Apple et Google. Les ennemis du smartphone s'étaient unis dans une cause pour ajouter des entrées au lexique des caractères universels.",
     "image" : "Emoji.png",
     "location" : "Apero Web, Septembre 2012, Toulouse"
-}
+}}

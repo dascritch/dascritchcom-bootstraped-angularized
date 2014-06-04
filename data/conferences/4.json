@@ -1,8 +1,8 @@
-{ 
+{"4":{ 
     "id" : 4,
     "title" : "JSON ou l'histoire d'une licence presque libre" ,
     "url" : "http://dascritch.net/post/2014/01/07/Json-ou-l-histoire-d-une-licence-presque-libre",
     "shortDesc":"En 20 minutes, je vais vous parler du JSON, de sa licence, de politique étrangère, d'activisme, d'humour, du Bien et du Mal.",
     "image" : "LicenceJson.jpg",
     "location" : "Capitole du Libre 2013, Toulouse\nAvril 2014, Mozilla Paris"
-}
+}}

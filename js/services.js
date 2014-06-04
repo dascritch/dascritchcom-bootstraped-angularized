@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('resumeeApp.services', []).
-	factory('RealisationsService', function($http) {
+	factory('RealisationsService',  function($http) {
 		var RealisationsService = {};
 		
 		RealisationsService.getReal = function(id) {
@@ -31,4 +31,22 @@ angular.module('resumeeApp.services', []).
 		}
 
 		return ConferencesService;
+	}).
+
+	factory('AspectService', function() {
+		var AspectService = {};
+		
+		AspectService.hideLists = function() {
+			$('section').slideUp();
+			$.scrollTo('article', 800);
+		}
+
+		AspectService.backFromItem = function(id) {
+			$('section').slideDown();
+            // on est d'accord ? c'est über crade. Sauf que les hauteurs changeants de concert, impossible de calculer d'entrée le bon offset
+            // et impossible de chainer jquery.delay()
+            setTimeout(function(){$.scrollTo('#'+id, 800)},100);
+		}
+
+		return AspectService;
 	});

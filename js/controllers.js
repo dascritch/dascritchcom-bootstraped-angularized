@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('resumeeApp.controllers', []).
-	controller('RealisationsController', ['$scope','$routeParams','$sce','RealisationsService', function($scope,$routeParams,$sce,RealisationsService) {
+	controller('RealisationsController', ['$scope','$routeParams','$sce','RealisationsService','AspectService', function($scope,$routeParams,$sce,RealisationsService,AspectService) {
         $scope.items = [];
         $scope.params = $routeParams;
         
@@ -15,30 +15,30 @@ angular.module('resumeeApp.controllers', []).
             }
         });
 
-        $scope.backFromItem = function(){
-            $('#realisations ul').slideDown();
-            $.scrollTo('#realisations', 800);
-        }
+        $scope.backFromItem = AspectService.backFromItem;
 
 	}]).
-    controller('ConferencesController', ['$scope','$routeParams','$sce','ConferencesService', function($scope,$routeParams,$sce,ConferencesService) {
+    controller('ConferencesController', ['$scope','$routeParams','$sce','ConferencesService','AspectService', function($scope,$routeParams,$sce,ConferencesService,AspectService) {
         $scope.items = [];
         $scope.params = $routeParams;
-        
-        ConferencesService.getConf($scope.params.realId).success(function (response) {
+        // ces doublons, ces dooooouuuubllooooooons :(
+        ConferencesService.getConf($scope.params.confId).success(function (response) {
+            function cleanate(item) {
+                item.location =  $sce.trustAsHtml(item.location.replace(/\n/g,'<br />'));
+                return item;
+            }
             // je déteste cette notation, mais faut penser à ce pauvre Safari aussi
             for( var i in response) { 
                 if (response.hasOwnProperty(i)) {
-                    response[i].location =  $sce.trustAsHtml(response[i].location.replace(/\n/g,'<br />'));
+                    response[i] = cleanate(response[i]);
                 }
             }
+
             $scope.items = response;
+            if ($scope.params.confId !== undefined) {
+                $scope.item = $scope.items[$scope.params.confId];
+            }
         });
-
-        // ça mériterait une sérieuse refacto, mais y'a un bug que je ne m'explique pas
-
-        $scope.backFromItem = function(){
-            $('#conferences ul').slideDown();
-            $.scrollTo('#conferences', 800);
-        }
+        
+        $scope.backFromItem = AspectService.backFromItem;
     }]);
