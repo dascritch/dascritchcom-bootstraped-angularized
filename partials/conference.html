@@ -1,7 +1,7 @@
 
 <img src="./img/Conf-{{item.image}}" alt="" />
 <h2>{{item.title}}</h2>
-<p>{{item.location}}</p>
+<p ng-bind-html="item.location"></p>
 
 <p><b>{{item.shortDesc}}</b></p>
 <p ng-bind-html="item.longDesc"></p>
