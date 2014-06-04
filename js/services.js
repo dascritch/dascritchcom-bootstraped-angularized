@@ -7,7 +7,7 @@ angular.module('resumeeApp.services', []).
 		RealisationsService.getReal = function() {
 			return $http({
 		        method: 'GET', 
-		        url: './data/realisations.json'
+		        url: './data/realisations'
 			});
 		}
 
@@ -20,7 +20,7 @@ angular.module('resumeeApp.services', []).
 		ConferencesService.getReal = function() {
 			return $http({
 		        method: 'GET', 
-		        url: './data/conferences.json'
+		        url: './data/conferences'
 			});
 		}
 

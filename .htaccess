@@ -1,5 +1,7 @@
-Options -Indexes -Multiviews
+Options -Indexes +Multiviews
 AddDefaultCharset UTF-8
+
+AddHandler application/json .json
 
 <FilesMatch "\.html$">
 	<ifModule mod_headers.c>
