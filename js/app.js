@@ -19,7 +19,17 @@ config(function($routeProvider, $locationProvider) {
 					$.scrollTo('#realisations', 800);
 				}
 			}
-		})
+		}).
+		when('/Conference/:confId', {
+			templateUrl: 'partials/conference.html',
+			controller: 'ConferencesController',
+			resolve: {
+				delay: function() {
+					$('#conferences ul').slideUp();
+					$.scrollTo('#conferences', 800);
+				}
+			}
+		});
 
 	// effectivement, sans cette directive, on est coincé en mode sous répertoire 
 	$locationProvider.html5Mode(false);

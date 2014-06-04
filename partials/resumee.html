@@ -22,18 +22,19 @@
 	<h2>Conférences</h2>
 	<ul class="row">
 		<li class="col-md-4" ng-repeat="item in items">
-			<a href="{{item.url}}">
+			<a href="#Conference/{{item.id}}">
 				<figure>
 					<img src="./img/Conf-{{item.image}}" alt="" />
 					<figcaption>
 						<h2>{{item.title}}</h2>
-						<p class="onhover">{{item.shortDesc}}</p>
+						<p class="onhover" ng-bind-html="item.location"></p>
 					</figcaption>
 				</figure>
 			</a>
 			
 		</li>
 	</ul>
+	<article ng-view></article>	
 	<p>
 		Outre <a href="http://dascritch.net/tag/talk">ces conférences</a> qui ont lieues aléatoirement, je peux aussi vous proposer de <a href="http://dascritch.net/post/2014/05/07/Je-suis-un-Bagger">faire un brown bag avec votre équipe</a>.
 	</p>

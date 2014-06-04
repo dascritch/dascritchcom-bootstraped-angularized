@@ -23,6 +23,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=yes, target-densityDpi=medium-dpi, initial-scale=0.8" />
     <link rel="icon" type="image/png" href="./sources/favicon/favicon16.png" />
     <link rel="icon" type="image/png" sizes="128x128" href="./sources/favicon/favicon128.png" />
+    <!-- collateral -->
     <link rel="search" type="application/opensearchdescription+xml" title="Da Scritch blog" href="http://dascritch.net/blogfind.xml" />
 
 </head>
@@ -70,9 +71,7 @@
 	</header>
 
 	<main class="container" ng-include src="'./partials/resumee.html'">
-
 		<!-- spinner trouvé sur http://tobiasahlin.com/spinkit/ -->
-
 		<div class="spinner">
 		  <div class="rect1"></div>
 		  <div class="rect2"></div>
@@ -80,12 +79,12 @@
 		  <div class="rect4"></div>
 		  <div class="rect5"></div>
 		</div>
-
 	</main>
 
-
 	<footer>
-		<p>handcrafted in 2014</p>
+		<div class="container">
+			<p><a href="http://dascritch.com">site de référence : dascritch.com</a> — <a href="http://linkedin.com/in/dascritch">mon cv est plus complet sur linkedin</a> — <a href="http://dascritch.net">mon blog</a> — handcrafted with ♥ in Toulouse, 2014</p>
+		</div>
 	</footer>
 
 	<!-- Cette erreur stupide chez Google de mettre les assets js en fin de body au lieu d'utiliser async… -->

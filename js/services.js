@@ -22,10 +22,11 @@ angular.module('resumeeApp.services', []).
 	factory('ConferencesService', function($http) {
 		var ConferencesService = {};
 		
-		ConferencesService.getReal = function() {
+		ConferencesService.getConf = function(id) {
+			var key = ( id === undefined ? 'index' : id ) +'.json';
 			return $http({
 		        method: 'GET', 
-		        url: './data/conferences/index.json'
+		        url: './data/conferences/'+key
 			});
 		}
 

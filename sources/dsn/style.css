@@ -91,6 +91,12 @@ section h2 {
         padding-top : 80px;
     }
 
+    #conferences figure {
+        /* ne pas faire des conférences des éléments plus importants que les réalisations */
+        max-height : 300px;
+        overflow : hidden;
+    }
+
 }
 
 @media (min-width: 768px) {

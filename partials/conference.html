@@ -1,0 +1,10 @@
+	
+<article>
+		<img class="pull-right" src="./img/Conf-{{item.image}}" alt="" />
+		<h2>{{item.title}}</h2>
+		<p>{{item.location}}</p>
+	<p><b>{{item.shortDesc}}</b></p>
+	<p ng-bind-html="item.longDesc"></p>
+	<p><a href="{{item.url}}" target="blog">Voir cette conférence</a></p>
+	<p><a href="#conferences" ng-click="backFromItem()"><em>Revenir aux autres conférences</em></a></p>
+</article>
