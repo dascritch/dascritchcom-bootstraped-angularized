@@ -74,3 +74,19 @@ a:hover .onhover , a:focus .onhover {
 .toreveal:target {
     max-height : 1000px;
 }
+
+h1 strong {
+    white-space : nowrap;
+}
+
+section h2 {
+    font-weight: bold;
+}
+
+@media (max-width: 767px) {
+
+    #presentation {
+        padding-top : 80px;
+    }
+
+}

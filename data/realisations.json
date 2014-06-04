@@ -13,4 +13,9 @@
     "shortDesc" :"dAgence est une solution d'hébergement/cocooning pour les agences web. Elles peuvent ainsi proposer des services d'e-commerce sans le tracas de la maintenance.",
     "image" : "dAgencePro.png",
     "longDesc":"Projet commandé construit avec deux co-développeurs, le responsable IT et le Product Owner. Planification agile Scrum, développement en TDD et usage de Git. \n Développé sur un code PHP, framework CakePHP et une base PostGreSQL, avec des webservices backend d'indexation/OCR sous Windows écrits en C# asservissant Atalasoft Imaging. Interface en balisage HTML5 dans une optique d'application responsive web-design en Single Page Application. Javascript front-end sur des bases jQuery et PDF.js.\nAutres technologies employées : Vim, Kdevelop, SublimeText, Bash, XML, CSS, ASPX, Linux"
+},"SupplementWeekEnd":{
+    "title" : "Supplément Week-End",
+    "shortDesc" : "Site web d'une émission radio, support à la diffusion podcast. Site hébergé sur la plateforme dAgence avec agrégation de flux et service d'e-mailing.",
+    "image" : "supplementweekend.png",
+    "longDesc" : "Projet personnel, support de tests. Co-producteur de l'émission, chargé de la réalisation, programmation musicale et habillage, en collaboration avec 3 autres animateurs. Écriture du conducteur, traduction des interviewes en Anglais, planification des agendas et des opérations extérieures.\nAgrégation de flux RSS/Atom sur dAgence, alimenté à partir des blogs des animateurs et de différents réseaux sociaux. Montages sonores à partir d'Audacity et de Protools. Conformations des podcasts avec Bash, Sox, Oggenc, LibLame.\n Autres technologies : LibreOffice, GoogleDrive, DropBox, IceCast, SSH, Mac, Linux, Autocom, Airlab D&amp;R"
 }}

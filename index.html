@@ -25,50 +25,117 @@
 
 </head>
 <body>
-		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-			<div>
-			<div class="nav navbar-nav">
-				<div class="navbar-header" id="fat-menu" class="dropdown">
-					<a href="#" id="drop" role="button" class="dropdown-toggle navbar-brand" data-toggle="dropdown">Xavier Mouton-Dubosc<b class="caret"></b></a>
-					<ul class="dropdown-menu" role="menu" aria-labelledby="drop">
-						<li role="presentation"><a role="menuitem" tabindex="-1" href="#presentation">Présentation</a></li>
-						<li role="presentation"><a role="menuitem" tabindex="-1" href="#realisations">Réalisations</a>
-							<ul ng-controller="RealisationsController">
-								<li role="presentation" ng-repeat="(key, item) in items"><a role="menuitem" tabindex="-1" href="#{{key}}">{{item.title}}</a></li>
-							</ul>
-						</li>
-						<li role="presentation" class="divider"></li>
-						<li role="presentation"><a role="menuitem" tabindex="-1" href="#conferences">Conférences</a></li>
-						<li role="presentation" class="divider"></li>
-						<li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.linkedin.com/in/dascritch">LinkedIn</a></li>
-						<li role="presentation"><a role="menuitem" tabindex="-1" href="http://dascritch.net">Blog</a></li>
-					</ul>
-				</div>
-				<div class="navbar-collapse collapse">
-				</div>
-				</div>
-			
+	<div class="navbar navbar-inverse navbar-fixed-top visible-xs" role="navigation">
+		<div>
+		<div class="nav navbar-nav">
+			<div class="navbar-header" id="fat-menu" class="dropdown">
+				<a href="#" id="drop" role="button" class="dropdown-toggle navbar-brand" data-toggle="dropdown">Xavier Mouton-Dubosc<b class="caret"></b></a>
+				<ul class="dropdown-menu" role="menu" aria-labelledby="drop">
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#presentation">Présentation</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#realisations">Réalisations</a>
+						<ul ng-controller="RealisationsController">
+							<li role="presentation" ng-repeat="(key, item) in items"><a role="menuitem" tabindex="-1" href="#{{key}}">{{item.title}}</a></li>
+						</ul>
+					</li>
+					<li role="presentation" class="divider"></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="#conferences">Conférences</a></li>
+					<li role="presentation" class="divider"></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="https://www.linkedin.com/in/dascritch">LinkedIn</a></li>
+					<li role="presentation"><a role="menuitem" tabindex="-1" href="http://dascritch.net">Blog</a></li>
+				</ul>
 			</div>
+			<div class="navbar-collapse collapse">
+			</div>
+			</div>
+		
+		</div>
+	</div>
+
+	<header id="presentation" class="jumbotron">
+		<!-- L'introduction est remontée dans un Jumbotron -->
+		<div class="container">
+			<img class="pull-right" src="./sources/favicon/favicon128.png" alt="photo" />
+			<h1 class="fn">Je suis <strong><span class="given-name">Xavier</span> <span class="family-name">Mouton-Dubosc</span></strong></h1>
+			<h2>je suis <strong class="role">lead web developer</strong></h2>
+			<p>
+				J'aime défricher les prochaines normes comme le HTML5, Javascript ECMA6, DOM3, les microformats et le Single Page Application. Je suis sensibilisé aux problèmes de sécurité et de vie privée et je partage mes connaissances lors de conférences.
+			</p>
+			<p>
+				Mes compétences font la part belle à la modernité, la solidité, l'accessibilité et surtout à l'expérience.
+				Un projet&nbsp;? Un besoin&nbsp;? Un problème&nbsp;? Je peux vous conseiller, et vous aider à faire le meilleur choix possible pour le futur de votre activité.
+			</p>
+		</div>
+	</header>
+
+	<main class="container" ng-include src="'./partials/resumee.html'">
+
+		<!-- spinner trouvé sur http://tobiasahlin.com/spinkit/ -->
+
+		<div class="spinner">
+		  <div class="rect1"></div>
+		  <div class="rect2"></div>
+		  <div class="rect3"></div>
+		  <div class="rect4"></div>
+		  <div class="rect5"></div>
 		</div>
 
-		<header id="presentation" class="jumbotron">
-			<!-- L'introduction est remontée dans un Jumbotron -->
-			<div class="container">
-				<img class="pull-right" src="./sources/favicon/favicon128.png" alt="photo" />
-				<h1 class="fn">Je suis <strong><span class="given-name">Xavier</span> <span class="family-name">Mouton-Dubosc</span></strong></h1>
-				<h2>je suis <strong class="role">lead web developer</strong></h2>
-				<p>
-					J'aime défricher les prochaines normes comme le <a href="http://dascritch.net/tag/html">HTML5</a>, <a href="http://dascritch.net/tag/javascript">Javascript ECMA6</a>, <a href="http://dascritch.net/tag/dom">DOM3</a>, les microformats et le Single Page Application. Je suis sensibilisé aux problèmes de <a href="http://dascritch.net/tag/s%C3%A9curit%C3%A9">sécurité</a> et de <a href="http://dascritch.net/tag/privacy">vie privée</a> et je partage mes connaissances lors de <a href="http://dascritch.net/tag/talks">conférences</a>.
-				</p>
-				<p>
-					Mes compétences font la part belle à la modernité, la solidité, l'accessibilité et surtout à l'expérience.
-					Un projet&nbsp;? Un besoin&nbsp;? Un problème&nbsp;? Je peux vous conseiller, et vous aider à faire le meilleur choix possible pour le futur de votre activité.
-				</p>
-			</div>
-		</header>
+		<!-- style embarqué, ce qui est théoriquement contraire aux usages, sauf pour alléger les règles puisque scoped -->
+		<style scope>
+			.spinner {
+			  margin: 100px auto;
+			  width: 50px;
+			  height: 30px;
+			  text-align: center;
+			  font-size: 10px;
+			}
 
-		<main class="container" ng-include src="'./partials/resumee.html'">
-		</main>
+			.spinner > div {
+			  background-color: #333;
+			  height: 100%;
+			  width: 6px;
+			  display: inline-block;
+			  
+			  -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+			  animation: stretchdelay 1.2s infinite ease-in-out;
+			}
+
+			.spinner .rect2 {
+			  -webkit-animation-delay: -1.1s;
+			  animation-delay: -1.1s;
+			}
+
+			.spinner .rect3 {
+			  -webkit-animation-delay: -1.0s;
+			  animation-delay: -1.0s;
+			}
+
+			.spinner .rect4 {
+			  -webkit-animation-delay: -0.9s;
+			  animation-delay: -0.9s;
+			}
+
+			.spinner .rect5 {
+			  -webkit-animation-delay: -0.8s;
+			  animation-delay: -0.8s;
+			}
+
+			@-webkit-keyframes stretchdelay {
+			  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+			  20% { -webkit-transform: scaleY(1.0) }
+			}
+
+			@keyframes stretchdelay {
+			  0%, 40%, 100% { 
+			    transform: scaleY(0.4);
+			    -webkit-transform: scaleY(0.4);
+			  }  20% { 
+			    transform: scaleY(1.0);
+			    -webkit-transform: scaleY(1.0);
+			  }
+			}
+		</style>
+
+	</main>
 
 
 	<footer>
